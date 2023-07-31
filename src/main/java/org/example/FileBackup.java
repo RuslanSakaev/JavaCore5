@@ -11,7 +11,11 @@ public class FileBackup {
         File backupDir = new File(sourceDir.getParent(), "backup");
 
         if (!backupDir.exists()) {
-            backupDir.mkdir();
+            boolean created = backupDir.mkdirs(); // Можно использовать mkdirs() для создания родительских каталогов, если это необходимо.
+            if (!created) {
+                System.err.println("Не удалось создать резервный каталог.");
+                return;
+            }
         }
 
         File[] files = sourceDir.listFiles();

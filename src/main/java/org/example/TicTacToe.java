@@ -74,7 +74,7 @@ public class TicTacToe {
         System.out.println("Игровое поле:");
         printGameBoard(gameBoard);
 
-        System.out.println("\nЗагрузка игрового поля:");
+        System.out.println("\nИгоровое поле прочитанное из файла:");
         printGameBoard(loadedGameBoard);
     }
 }
